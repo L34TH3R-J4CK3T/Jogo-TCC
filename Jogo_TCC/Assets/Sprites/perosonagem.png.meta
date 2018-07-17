@@ -4,7 +4,7 @@ timeCreated: 1528917166
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: perosnagem_0
+    21300000: personagem_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -111,7 +111,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: perosnagem_0
+      name: personagem_0
       rect:
         serializedVersion: 2
         x: 232
