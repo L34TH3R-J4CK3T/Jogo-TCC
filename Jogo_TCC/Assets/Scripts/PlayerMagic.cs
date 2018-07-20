@@ -8,7 +8,7 @@ public class PlayerMagic : MonoBehaviour {
     //Area de que decide o elemento (manter nos pes do personagem)
     public Transform groundMagicCheck;
     public Transform MagicWall;
-
+   
 
     //Tipos de magias
     private bool fire = false;
@@ -24,6 +24,9 @@ public class PlayerMagic : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        Vector3 bar = transform.position;
+        bar.x = bar.x + 5;
 
         // qual elemento o ground magic check esta pegando
         fire = Physics2D.Linecast(transform.position, groundMagicCheck.position, 1 << LayerMask.NameToLayer("Fire"));
@@ -48,7 +51,8 @@ public class PlayerMagic : MonoBehaviour {
             else
             {
                 Debug.Log(String.Format("Wind"));
-                Instantiate(MagicWall, new Vector3 (0, 0, 0), Quaternion.identity);
+
+                Instantiate(MagicWall, bar, Quaternion.identity);
 
             }
         }
