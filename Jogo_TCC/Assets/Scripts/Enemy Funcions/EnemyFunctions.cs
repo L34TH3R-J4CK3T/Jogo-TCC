@@ -8,6 +8,11 @@ public class EnemyFunctions : MonoBehaviour {
 	Controller2D controller;
 	Player player;
 	Transform posicao;
+    Animator anim;
+    public Transform groundMagicCheck;
+    public LayerMask collisionMask;
+    private bool playerD = false;
+
 
 
 	public int a0 = 0;
@@ -18,19 +23,34 @@ public class EnemyFunctions : MonoBehaviour {
 	void Start () {
 		player = GetComponent<Player> ();
 		posicao = GetComponent<Transform> ();
+        anim = GetComponent<Animator>();
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		float alfa = posicao.position.x; 
-		
+		float alfa = posicao.position.x;
 
-		if(Input.GetKeyDown(KeyCode.F)){
+        playerD = Physics2D.Linecast(transform.position, groundMagicCheck.position, collisionMask);
+
+        //if (Input.GetKeyDown(KeyCode.G))
+        //{
+        //    Moving(a0);
+        //    Attacking();
+        //}
+
+        if (playerD)
+        {
+            Moving(a0);
+            Attacking();
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.F)){
 			Debug.Log("Moving");
 			Moving(a1);
-			beta = alfa+6;
+			beta = alfa+10;
 
 		}
 		if (alfa >= beta)
@@ -42,22 +62,17 @@ public class EnemyFunctions : MonoBehaviour {
 		
 	}
 
-
+    
       
-     void Moving (int direcao)
-         {
-            //  Vector2.MoveTowards(aPosition0, aPosition1, 10 * Time.deltaTime);
-			//  controller.Move (velocity * Time.deltaTime, directionalInput);
-			// 
-
-    			Vector2 directionalInput = new Vector2 (direcao, 0);
-				player.SetDirectionalInput (directionalInput);
-    			
-				
+    void Moving (int direcao)
+    {
+        Vector2 directionalInput = new Vector2 (direcao, 0);
+	    player.SetDirectionalInput (directionalInput);
+    }
 
 
-
-
-
-         }
+    void Attacking()
+    {
+        anim.SetTrigger("Attack"); 
+    }
 }

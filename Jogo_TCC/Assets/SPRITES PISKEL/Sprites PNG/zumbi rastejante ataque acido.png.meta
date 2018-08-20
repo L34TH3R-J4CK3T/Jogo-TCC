@@ -1,0 +1,392 @@
+fileFormatVersion: 2
+guid: 86a6c6391dd068d42bff0abfb08829e7
+timeCreated: 1534790577
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: zumbi rastejante ataque acido_0
+    21300002: zumbi rastejante ataque acido_1
+    21300004: zumbi rastejante ataque acido_2
+    21300006: zumbi rastejante ataque acido_3
+    21300008: zumbi rastejante ataque acido_4
+    21300010: zumbi rastejante ataque acido_5
+    21300012: zumbi rastejante ataque acido_6
+    21300014: zumbi rastejante ataque acido_7
+    21300016: zumbi rastejante ataque acido_8
+    21300018: zumbi rastejante ataque acido_9
+    21300020: zumbi rastejante ataque acido_10
+    21300022: zumbi rastejante ataque acido_11
+    21300024: zumbi rastejante ataque acido_12
+    21300026: zumbi rastejante ataque acido_13
+    21300028: zumbi rastejante ataque acido_14
+    21300030: zumbi rastejante ataque acido_15
+    21300032: zumbi rastejante ataque acido_16
+    21300034: zumbi rastejante ataque acido_17
+    21300036: zumbi rastejante ataque acido_18
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 35
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1100
+        width: 100
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_1
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 1100
+        width: 96
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_2
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 1100
+        width: 96
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_3
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 1100
+        width: 96
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 860
+        width: 96
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_5
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 860
+        width: 100
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_6
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 860
+        width: 100
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_7
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 860
+        width: 140
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 620
+        width: 152
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_9
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 620
+        width: 148
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_10
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 620
+        width: 148
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_11
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 620
+        width: 164
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_12
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 380
+        width: 172
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_13
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 380
+        width: 172
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_14
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 380
+        width: 176
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_15
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 380
+        width: 172
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_16
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 140
+        width: 180
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_17
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 140
+        width: 180
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zumbi rastejante ataque acido_18
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 140
+        width: 180
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
