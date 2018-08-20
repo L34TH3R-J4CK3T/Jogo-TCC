@@ -1,0 +1,63 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent (typeof (Player))]
+public class EnemyFunctions : MonoBehaviour {
+
+	Controller2D controller;
+	Player player;
+	Transform posicao;
+
+
+	public int a0 = 0;
+ 	public int a1 = 1;
+	float beta = 6;
+
+	// Use this for initialization
+	void Start () {
+		player = GetComponent<Player> ();
+		posicao = GetComponent<Transform> ();
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+
+		float alfa = posicao.position.x; 
+		
+
+		if(Input.GetKeyDown(KeyCode.F)){
+			Debug.Log("Moving");
+			Moving(a1);
+			beta = alfa+6;
+
+		}
+		if (alfa >= beta)
+		{
+			Debug.Log("Stoping");
+			Moving(a0);
+			beta++ ;
+		}
+		
+	}
+
+
+      
+     void Moving (int direcao)
+         {
+            //  Vector2.MoveTowards(aPosition0, aPosition1, 10 * Time.deltaTime);
+			//  controller.Move (velocity * Time.deltaTime, directionalInput);
+			// 
+
+    			Vector2 directionalInput = new Vector2 (direcao, 0);
+				player.SetDirectionalInput (directionalInput);
+    			
+				
+
+
+
+
+
+         }
+}
