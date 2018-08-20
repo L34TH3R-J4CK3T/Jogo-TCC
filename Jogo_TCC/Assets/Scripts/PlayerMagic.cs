@@ -5,6 +5,12 @@ using System;
 
 public class PlayerMagic : MonoBehaviour {
 
+    private void OnEnable()
+    {
+
+        EventManager.onReset += Magic;
+    }
+
     //Area de que decide o elemento (manter nos pes do personagem)
     public Transform groundMagicCheck;
     public Transform MagicWall;
@@ -57,5 +63,21 @@ public class PlayerMagic : MonoBehaviour {
             }
         }
 
+
     }
-}
+
+
+
+    public void Magic()
+    {
+        Vector3 bar = transform.position;
+        bar.x = bar.x + 5;
+
+        Instantiate(MagicWall, bar, Quaternion.identity);
+    }
+
+        private void OnDisable()
+        {
+        EventManager.onReset -= Magic;
+        }
+    }
