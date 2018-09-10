@@ -1,78 +1,53 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+
+public class StateController : MonoBehaviour 
+{
+
+    public State currentState;
+    public State remainInState;
+    public Transform stateColorPos;
+    public float colorRadius = 1;
+    private bool aiActive = true;
+    //-------------------------------------
+    Rigidbody2D RB2;
+    Vector2 vel = new Vector2(10f, 0f);
+
+    private void Awake()
+    {
+        RB2 = GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        if (!aiActive)
+            return;
+        currentState.UpdateState(this);
+
+    }
+
+    void OnDrawGizmos()
+    {
+        if(currentState != null &&  stateColorPos != null)
+        {
+            Gizmos.color = currentState.stateColor;
+            Gizmos.DrawSphere(stateColorPos.position, colorRadius);
+        }
+    }
+
+    public void TransitionToState(State nextState)
+    {
+        if(nextState != remainInState)
+        {
+            currentState = nextState;
+        }
+    }
 
 
-public class StateController : MonoBehaviour {
-
-	public State currentState;
-	public EnemyStats enemyStats;
-	public Transform eyes;
-	public State remainState;
-
-
-
-	// [HideInInspector] public List<Transform> wayPointList;
-	// [HideInInspector] public int nextWayPoint;
-	// [HideInInspector] public Transform chaseTarget;
-	[HideInInspector] public float stateTimeElapsed;
-
-	private bool aiActive;
-
-
-	void Awake () 
-	{
-			// tankShooting = GetComponent<Complete.TankShooting> ();
-			// navMeshAgent = GetComponent<NavMeshAgent> ();
-	}
-
-	public void SetupAI(bool aiActivationFromTankManager, List<Transform> wayPointsFromTankManager)
-	{
-		// wayPointList = wayPointsFromTankManager;
-		aiActive = aiActivationFromTankManager;
-		if (aiActive) 
-		{
-			// navMeshAgent.enabled = true;
-		} else 
-		{
-			// navMeshAgent.enabled = false;
-		}
-	}
-
-	void Update()
-	{
-		if (!aiActive)
-			return;
-		currentState.UpdateState (this);
-	}
-
-	void OnDrawGizmos()
-	{
-		if (currentState != null && eyes != null) 
-		{
-			Gizmos.color = currentState.sceneGizmoColor;
-			Gizmos.DrawWireSphere (eyes.position, enemyStats.lookSphereCastRadius);
-		}
-	}
-
-	public void TransitionToState(State nextState)
-	{
-		if (nextState != remainState) 
-		{
-			currentState = nextState;
-			OnExitState ();
-		}
-	}
-
-	public bool CheckIfCountDownElapsed(float duration)
-	{
-		stateTimeElapsed += Time.deltaTime;
-		return (stateTimeElapsed >= duration);
-	}
-
-	private void OnExitState()
-	{
-		stateTimeElapsed = 0;
-	}
+    //teste nao faz parte da IA daqui pra baixo
+    public void Move()
+    {
+        RB2.AddForce(vel);
+    }
 }
