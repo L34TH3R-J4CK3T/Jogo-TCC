@@ -7,21 +7,31 @@ using UnityEngine.AI;
 public class StateController : MonoBehaviour {
 
 	public State currentState;
-	public EnemyStats enemyStats;
 	public Transform eyes;
 	public State remainState;
+    public Transform groundEnd;
+    public float distance;
+    EnemyFunctions eFunction;
 
 
 
-	// [HideInInspector] public List<Transform> wayPointList;
-	// [HideInInspector] public int nextWayPoint;
-	// [HideInInspector] public Transform chaseTarget;
-	[HideInInspector] public float stateTimeElapsed;
+    // [HideInInspector] public List<Transform> wayPointList;
+    // [HideInInspector] public int nextWayPoint;
+    // [HideInInspector] public Transform chaseTarget;
+    [HideInInspector] public float stateTimeElapsed;
 
 	private bool aiActive;
 
+    public  void Attack1()
+    {
+        eFunction.Moving(1);
+    }
+    public  void Attack2()
+    {
+        eFunction.Flip();
+    }
 
-	void Awake () 
+    void Awake () 
 	{
 			// tankShooting = GetComponent<Complete.TankShooting> ();
 			// navMeshAgent = GetComponent<NavMeshAgent> ();
@@ -52,7 +62,6 @@ public class StateController : MonoBehaviour {
 		if (currentState != null && eyes != null) 
 		{
 			Gizmos.color = currentState.sceneGizmoColor;
-			Gizmos.DrawWireSphere (eyes.position, enemyStats.lookSphereCastRadius);
 		}
 	}
 
@@ -76,3 +85,7 @@ public class StateController : MonoBehaviour {
 		stateTimeElapsed = 0;
 	}
 }
+
+
+
+
