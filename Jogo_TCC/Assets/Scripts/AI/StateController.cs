@@ -8,6 +8,10 @@ public class StateController : MonoBehaviour
     public State currentState;
     public State remainInState;
     public Transform stateColorPos;
+
+    [HideInInspector]
+    public EnemyFunctions enemyFunction;
+
     public float colorRadius = 1;
     private bool aiActive = true;
     //-------------------------------------
@@ -17,6 +21,7 @@ public class StateController : MonoBehaviour
     private void Awake()
     {
         RB2 = GetComponent<Rigidbody2D>();
+        enemyFunction = GetComponent<EnemyFunctions>();
     }
 
     private void Update()
@@ -24,6 +29,15 @@ public class StateController : MonoBehaviour
         if (!aiActive)
             return;
         currentState.UpdateState(this);
+
+        if (enemyFunction != null)
+        {
+            Debug.Log("success");
+        }
+        else
+        {
+            Debug.Log("fail");
+        }
 
     }
 

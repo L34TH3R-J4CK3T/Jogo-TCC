@@ -13,5 +13,6 @@ public class PatrolAction : Action
     private void Patrol(StateController controller)
     {
         controller.Move();
+        controller.enemyFunction.Movement();
     }
 }

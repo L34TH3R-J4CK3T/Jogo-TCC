@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent (typeof (Player))]
-public class EnemyFunctions : MonoBehaviour {
+public class EnemyFunctionsOLD : MonoBehaviour {
 
 	Controller2D controller;
 	Player player;
