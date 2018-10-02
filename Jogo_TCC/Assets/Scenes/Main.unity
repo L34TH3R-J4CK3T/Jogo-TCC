@@ -658,6 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 955546200}
   - component: {fileID: 955546199}
+  - component: {fileID: 955546201}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -676,8 +677,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7d6c3f3fd13824d96706294a611632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthStarting: 5
-  healthActual: 2
+  gameControl: {fileID: 955546201}
+  startHearts: 5
   healthImages:
   - {fileID: 1595673603}
   - {fileID: 610810718}
@@ -705,6 +706,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &955546201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 955546198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ea6b33c7689b34a84ad384f70157cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
 --- !u!1 &1010517150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,7 +1376,7 @@ GameObject:
   - component: {fileID: 1723881561}
   - component: {fileID: 1723881563}
   m_Layer: 5
-  m_Name: HealthBAr
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -6,35 +6,43 @@ using UnityEngine.UI;
 
 public class Health_UI : MonoBehaviour {
 
-    private int healthMaxCap = 10;
-    public int healthStarting = 2;
-    public int healthActual;
-    private int healthMax;
-    private int healthPerHeart = 1;
+    public GameControl gameControl;
 
+
+    
+    public int startHearts; 
+    private int curHealth;
+    
+
+    private int healthPerHeart = 1;
+    [Header("Imagens")]
+    [Tooltip("Coloque todas as imagens para não ocorrer glitches.")]
     public Image[] healthImages;
     public Sprite[] healthSprites;
+    
+  
 
 
 	// Use this for initialization
 	void Start () {
-        healthActual = healthStarting * healthPerHeart;
-        healthMax = healthMaxCap * healthPerHeart;
+        
+        
         UpdateMaxHealth();
-        UpdateHealth();
+        UpdateActualHealth();
 	}
 
-    //private void Update()
-    //{
-    //    UpdateMaxHealth();
-    //    UpdateHealth();
-    //}
+    private void Update()
+    {   
+       curHealth = gameControl.health;
+       UpdateMaxHealth();
+       UpdateActualHealth();
+    }
 
     void UpdateMaxHealth()
     {
-        for (int i = 0; i < healthMaxCap; i++)
+        for (int i = 0; i < healthImages.Length; i++)
         {
-            if(healthStarting <= i)
+            if(startHearts <= i)
             {
                 healthImages[i].enabled = false;
             }
@@ -45,7 +53,7 @@ public class Health_UI : MonoBehaviour {
         }
     }
 
-    void UpdateHealth()
+    void UpdateActualHealth()
     {
         bool empty = false;
         int i = 0;
@@ -59,13 +67,13 @@ public class Health_UI : MonoBehaviour {
             else
             {
                 i++;
-                if(healthActual >= i * healthPerHeart)
+                if(curHealth >= i * healthPerHeart)
                 {
                     image.sprite = healthSprites[healthSprites.Length - 1];
                 }
                 else
                 {
-                    int currentHeartHealth = (int)(healthPerHeart - (healthPerHeart * i - healthActual));
+                    int currentHeartHealth = (int)(healthPerHeart - (healthPerHeart * i - curHealth ));
                     int healthPerImage = healthPerHeart / (healthSprites.Length - 1);
                     int imageIndex = currentHeartHealth / healthPerImage;
                     image.sprite = healthSprites[imageIndex];
